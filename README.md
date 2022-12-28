@@ -6,6 +6,7 @@ Online Shopping application
 Modules
 --------------------------
 1. User Module
-2. Product Module
-3. Cart module
-4. Order Module
+2. Address module
+3. Product Module
+4. Cart module
+5. Order Module
