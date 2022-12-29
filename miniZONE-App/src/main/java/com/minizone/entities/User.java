@@ -36,7 +36,7 @@ public class User {
 	private String userEmail;
 	private String password;
 	
-	/*
+	
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Address> address = new ArrayList<>();
@@ -44,6 +44,6 @@ public class User {
 	@JsonIgnore
 	@OneToOne(cascade = CascadeType.ALL)
 	private Cart cart;
-	*/
+	
 }
 
