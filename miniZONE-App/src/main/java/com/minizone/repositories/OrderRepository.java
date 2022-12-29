@@ -1,5 +1,8 @@
 package com.minizone.repositories;
 
-public interface OrderRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.minizone.entities.Order;
+
+public interface OrderRepository extends JpaRepository<Order, Long>{
 
 }
