@@ -18,7 +18,6 @@ import com.minizone.exceptions.ProductException;
 import com.minizone.servicesImplementation.ProductServiceImplementation;
 
 
-
 @RestController
 public class ProductController {
 
