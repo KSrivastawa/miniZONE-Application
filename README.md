@@ -37,7 +37,7 @@ Link: http://localhost:8881/swagger-ui/
 ![Swagger5](https://user-images.githubusercontent.com/103960690/210105198-d5457620-6ce8-4642-898f-1e55b4298243.png)
 ![Swagger2](https://user-images.githubusercontent.com/103960690/210105314-ba4797de-cc90-4da4-853d-76f2aecfebe3.png)
 ![Swagger3](https://user-images.githubusercontent.com/103960690/210105375-3cfb5681-56fb-4c1b-9fec-fd2f5f90ece3.png)
-![Swagger7](https://user-images.githubusercontent.com/103960690/210107985-bbf5bc40-a7ee-407b-8d87-5e6381acdaac.png)
+![Swagger8](https://user-images.githubusercontent.com/103960690/210108097-ebac69ca-6766-410c-afdd-ad73c375541f.png)
 ![Swagger4](https://user-images.githubusercontent.com/103960690/210105423-c1e34132-705f-47cf-991b-8632a0b581e9.png)
 
 
