@@ -10,3 +10,23 @@ Modules
 3. Product Module
 4. Cart module
 5. Order Module
+
+Project Type[Collaborative]:
+-------------------------------
+- Rest API using Spring Boot and Mysql
+- Used Swagger-UI to perform API's
+
+Technologies:
+--------------------------------
+- Spring Boot
+- Spring Data JPA (Hibernate)
+- MySQL
+- Swagger-UI
+
+ER-Diagram
+---------------------------
+![miniZONE_ER_Diagram](https://user-images.githubusercontent.com/103960690/210071118-57776299-72b0-4b59-9a2c-01c29bdbc578.png)
+
+------------------------------------------
+REST API this E-Commerce Application
+---------------------------------------
