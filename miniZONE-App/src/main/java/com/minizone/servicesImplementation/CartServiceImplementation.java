@@ -1,5 +1,7 @@
 package com.minizone.servicesImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -74,6 +76,20 @@ public class CartServiceImplementation implements CartService{
         return message;
 
     }
+
+	@Override
+	public List<Product> getAllProductsFromCart(Long cartId) throws CartException{
+		
+		Cart cart = cartRepository.findById(cartId).orElseThrow(()-> new CartException("Cart Not Available") );
+		
+		List<Product> products = cart.getProductList();
+		
+		if(products.isEmpty()) {
+			throw new CartException("Product not found!");
+		}
+		
+		return products;
+	}
 
 
 
