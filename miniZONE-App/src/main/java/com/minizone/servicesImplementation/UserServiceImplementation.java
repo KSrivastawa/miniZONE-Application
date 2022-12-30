@@ -32,7 +32,7 @@ public class UserServiceImplementation implements UserService {
 		String message = "Not added!";
 		
 		Optional<User> userOptional = userRepository.findByEmail(user.getUserEmail());
-		/*
+		
 		if(!userOptional.isPresent()) {	
 			
 			Cart c = cartRepository.save(cart);
@@ -43,7 +43,7 @@ public class UserServiceImplementation implements UserService {
 			
 		}else
 			throw new UserException("Unable to add user on duplicate useremail...");
-		*/
+		
 		return message;
 	}
 

@@ -1,10 +1,17 @@
 package com.minizone.servicesImplementation;
-import com.minizone.*;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.minizone.entities.Address;
+import com.minizone.entities.User;
+import com.minizone.exceptions.AddressException;
+import com.minizone.exceptions.UserException;
+import com.minizone.repositories.AddressRepository;
+import com.minizone.repositories.UserRepository;
+import com.minizone.services.AddressService;
 
 @Service
 public class AddressServiceImplementation implements AddressService{

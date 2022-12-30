@@ -3,8 +3,9 @@ package com.minizone.services;
 import java.util.List;
 
 import com.minizone.entities.Address;
-import com.miniproject.exception.AddressException;
-import com.miniproject.exception.UserException;
+import com.minizone.exceptions.AddressException;
+import com.minizone.exceptions.UserException;
+
 
 public interface AddressService {
 

@@ -2,7 +2,14 @@ package com.minizone.servicesImplementation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.minizone.*;
+
+import com.minizone.entities.Cart;
+import com.minizone.entities.Product;
+import com.minizone.exceptions.CartException;
+import com.minizone.repositories.CartRepository;
+import com.minizone.repositories.ProductRepository;
+import com.minizone.services.CartService;
+
 
 @Service
 public class CartServiceImplementation implements CartService{
