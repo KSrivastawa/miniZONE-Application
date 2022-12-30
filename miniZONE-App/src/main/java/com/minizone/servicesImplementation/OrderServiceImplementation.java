@@ -1,15 +1,21 @@
 package com.minizone.servicesImplementation;
 
 import com.minizone.entities.*;
+import com.minizone.exceptions.OrderException;
+import com.minizone.repositories.AddressRepository;
+import com.minizone.repositories.OrderRepository;
+import com.minizone.repositories.UserRepository;
+import com.minizone.services.OrderService;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-public class OrderServiceImplementation {
+
 
     @Service
-public class OrderServiceImplementation implements OrderService {
+    public class OrderServiceImplementation implements OrderService {
 
 
     @Autowired
@@ -83,9 +89,5 @@ public class OrderServiceImplementation implements OrderService {
 
         return orders;
     }
+    }
 
-
-
-}
-
-}

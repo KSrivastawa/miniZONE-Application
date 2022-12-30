@@ -2,6 +2,7 @@ package com.minizone.services;
 
 import java.util.List;
 import com.minizone.entities.Order;
+import com.minizone.exceptions.OrderException;
 
 public interface OrderService {
 
