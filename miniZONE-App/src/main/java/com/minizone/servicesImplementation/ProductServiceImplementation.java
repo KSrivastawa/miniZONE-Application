@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.minizone.entities.Product;
+import com.minizone.entities.User;
 import com.minizone.exceptions.ProductException;
 import com.minizone.repositories.ProductRepository;
+import com.minizone.repositories.UserRepository;
 import com.minizone.services.ProductService;
 
 @Service
@@ -15,54 +17,86 @@ public class ProductServiceImplementation implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
+    
+    @Autowired
+    private UserRepository userRepository;
 
     @Override
-    public String addProduct(Product product) throws ProductException {
+    public String addProduct(Product product, Long userId) throws ProductException {
 
         Product addProduct = productRepository.findProductByName(product.getProductName());
 
-        if(addProduct == null) {
+        User user = userRepository.findById(userId).get();
+        
+        if(user.getRole()=="Admin") {
+        	
+        	if(addProduct == null) {
 
-            productRepository.save(product);
+                productRepository.save(product);
 
-            return "Product added!";
+                return "Product added!";
+            }
+            else {
+                throw new ProductException("Not added, Product already exists on the same name!");
+            }
+
+        }else {
+        	throw new ProductException("Only Admin is Athorize to add product!");
         }
-        else {
-            throw new ProductException("Not added, Product already exists on the same name!");
-        }
-
+        
+        
     }
 
     @Override
-    public String updateProduct(Product product, Long productId) throws ProductException {
+    public String updateProduct(Product product, Long productId, Long userId) throws ProductException {
         String message = "Not Updated!";
 
         Product updateProduct = productRepository.findById(productId).orElseThrow(()-> new ProductException("Product not found!"));
 
-        if(updateProduct != null) {
 
-            productRepository.save(product);
+        User user = userRepository.findById(userId).get();
+        
+        if(user.getRole()=="Admin") {
+        
+	        if(updateProduct != null) {
+	
+	            productRepository.save(product);
+	
+	            message = "Product updated successfully!";
+	        }
+	
+	        return message;
 
-            message = "Product updated successfully!";
+        }else {
+        	throw new ProductException("Only Admin is Athorize to add product!");
         }
-
-        return message;
-
+	        
     }
+    
+    
     @Override
-    public String deleteProductById(Long productID) throws ProductException {
+    public String deleteProductById(Long productID, Long userId) throws ProductException {
         String message = "Not Deleted!";
 
         Product product = productRepository.findById(productID).orElseThrow(()-> new ProductException("Product not found!"));
 
-        if(product != null) {
-
-            productRepository.delete(product);
-
-            message = "Product deleted successfully!";
+        User user = userRepository.findById(userId).get();
+        
+        if(user.getRole()=="Admin") {
+        
+	        if(product != null) {
+	
+	            productRepository.delete(product);
+	
+	            message = "Product deleted successfully!";
+	        }
+	
+	        return message;
+	        
+        }else {
+        	throw new ProductException("Only Admin is Athorize to add product!");
         }
-
-        return message;
+        
     }
 
     @Override

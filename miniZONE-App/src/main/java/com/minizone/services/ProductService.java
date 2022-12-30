@@ -7,11 +7,11 @@ import com.minizone.exceptions.ProductException;
 
 public interface ProductService {
 	
-	 	public String addProduct(Product product) throws ProductException;
+	 	public String addProduct(Product product, Long userId) throws ProductException;
 	    
-	    public String updateProduct(Product product, Long productId) throws ProductException;
+	    public String updateProduct(Product product, Long productId, Long userId) throws ProductException;
 	    
-	    public String deleteProductById(Long productID) throws ProductException;
+	    public String deleteProductById(Long productID, Long userId) throws ProductException;
 	    
 	    public Product getProductById(Long productID) throws ProductException;
 	    

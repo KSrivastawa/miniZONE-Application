@@ -20,6 +20,6 @@ public class MiniZoneAppApplication {
 		lvfb.setValidationMessageSource(source);
 	
 		return lvfb;
-	}
+	}	
 
 }

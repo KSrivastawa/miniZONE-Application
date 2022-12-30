@@ -13,6 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -36,6 +37,8 @@ public class User {
 	private String userEmail;
 	private String password;
 	
+	@Pattern(regexp = "Admin|User")
+	private String role;
 	
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL)
